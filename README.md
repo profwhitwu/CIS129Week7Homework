@@ -3,13 +3,13 @@ This assignment is meant to measure how well you understand writing methods.  Yo
 
 1. Write a method that converts any given decimal to the nearest whole number, then returns that number. Numbers in `x.5` format should be rounded up.  Call this method `ConvertToNearestWhole` and place in the `MethodsHomework` class.
 
-2. Write a method that takes two strings parameters, combines them, and returns them as one value.  Call this method `CombineTwoStrings` and place in the `MethodsHomework` class.
+2. Write a method that takes two strings parameters, combines them, and returns them as one value.  They should be concatenated in the same order as they appear in the parameters.  Call this method `CombineStrings` and place in the `MethodsHomework` class.
 
 3. Write an extension method that counts the number of vowels in a string and returns the result.  Call this method `VowelCounter` and place in the `ExtensionMethodsHomework` class.  REMEMBER: C# is case-senstive so you need to ensure the values you are comparing against are the came casing as the vowels you are measuring them against.
 
 4. Write a method that takes a list of `Person` objects as a parameter.  Iterate through the list to observe each person manually.  Change their `IsEligibleForRefund` property to `true` if...
-     - They are at least 18 years old
-     - Are NOT a dependent
+     - They are at least 18 years old AND
+     - Are NOT a dependent AND
      - Have a form of income
 
     Otherwise, change `IsEligibleForRefund` to `false`.  Call this method `CheckTaxRefundEligibility` and place in the `MethodsHomework` class.  This method will NOT return anything.
@@ -17,3 +17,5 @@ This assignment is meant to measure how well you understand writing methods.  Yo
 5. Write an extension method to check if an int is even. If it is, return true.  Call this `IsIntEven` and place in the `ExtensionMethodsHomework` class.
 
 6. Write a method to calculate income taxes.  The first parameter should contain taxable income, and the 2nd should be the percentage of income to be withheld.  Make a third optional parameter for additional taxes to withhold (should be 0 by default). Add the 2nd and third params to make the final percentage of income to withhold and use that to calculate the amount of taxes in dollars to return.  Call this method `CalculateIncomeTaxes` and place in the `MethodsHomework` class.
+
+7. Write an overloaded version of your `CombineStrings` method to take 3 strings as parameters, then concatenate them as one result.  They should be concatenated in the same order as they appear in the parameters.
