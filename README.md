@@ -5,7 +5,7 @@ This assignment is meant to measure how well you understand writing methods.  Yo
 
 2. Write a method that takes two strings parameters, combines them, and returns them as one value.  They should be concatenated in the same order as they appear in the parameters.  Call this method `CombineStrings` and place in the `MethodsHomework` class.
 
-3. Write an extension method that counts the number of vowels in a string and returns the result.  Call this method `VowelCounter` and place in the `ExtensionMethodsHomework` class.  REMEMBER: C# is case-senstive so you need to ensure the values you are comparing against are the came casing as the vowels you are measuring them against.
+3. Write an extension method that counts the number of vowels in a string and returns the result.  Call this method `VowelCounter` and place in the `ExtensionMethodsHomework` class.  REMEMBER: C# is case-senstive so you need to ensure the values you are comparing are the came casing as the vowels you are measuring them against.
 
 4. Write a method that takes a list of `Person` objects as a parameter.  Iterate through the list to observe each person manually.  Change their `IsEligibleForRefund` property to `true` if the person being checked...
      - Is at least 18 years old AND
