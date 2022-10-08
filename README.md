@@ -7,10 +7,10 @@ This assignment is meant to measure how well you understand writing methods.  Yo
 
 3. Write an extension method that counts the number of vowels in a string and returns the result.  Call this method `VowelCounter` and place in the `ExtensionMethodsHomework` class.  REMEMBER: C# is case-senstive so you need to ensure the values you are comparing against are the came casing as the vowels you are measuring them against.
 
-4. Write a method that takes a list of `Person` objects as a parameter.  Iterate through the list to observe each person manually.  Change their `IsEligibleForRefund` property to `true` if...
-     - They are at least 18 years old AND
-     - Are NOT a dependent AND
-     - Have a form of income
+4. Write a method that takes a list of `Person` objects as a parameter.  Iterate through the list to observe each person manually.  Change their `IsEligibleForRefund` property to `true` if the person being checked...
+     - Is at least 18 years old AND
+     - Is NOT a dependent AND
+     - Has a form of income
 
     Otherwise, change `IsEligibleForRefund` to `false`.  Call this method `CheckTaxRefundEligibility` and place in the `MethodsHomework` class.  This method will NOT return anything.
 
