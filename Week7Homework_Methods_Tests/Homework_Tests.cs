@@ -1,15 +1,15 @@
 namespace Week7Homework_Methods_Tests
 {
     [TestClass]
-    public class MethodsHomework_Tests
+    public class Homework_Tests
     {
-        public MethodsHomework methodsHomework;
+        public Homework homework;
         public List<Person> people;
 
         [TestInitialize]
         public void Setup()
         {
-            methodsHomework = new MethodsHomework();
+            homework = new Homework();
             people = new List<Person>()
             {
                 new Person()
@@ -54,7 +54,7 @@ namespace Week7Homework_Methods_Tests
             decimal number = 5.6m;
 
             // act
-            var result = methodsHomework.ConvertToNearestWhole(number);
+            var result = homework.ConvertToNearestWhole(number);
 
             // assert
 
@@ -68,7 +68,7 @@ namespace Week7Homework_Methods_Tests
             decimal number = 5.4m;
 
             // act
-            var result = methodsHomework.ConvertToNearestWhole(number);
+            var result = homework.ConvertToNearestWhole(number);
 
             // assert
 
@@ -82,7 +82,7 @@ namespace Week7Homework_Methods_Tests
             decimal number = 5.5m;
 
             // act
-            var result = methodsHomework.ConvertToNearestWhole(number);
+            var result = homework.ConvertToNearestWhole(number);
 
             // assert
             Assert.AreEqual(6, result);
@@ -96,7 +96,7 @@ namespace Week7Homework_Methods_Tests
             string lastString = "There";
 
             // act
-            var result = methodsHomework.CombineStrings(firstString, lastString);
+            var result = homework.CombineStrings(firstString, lastString);
 
             //assert
             Assert.AreEqual("HelloThere", result);
@@ -111,7 +111,7 @@ namespace Week7Homework_Methods_Tests
             string finalString = "Kenobi";
 
             // act
-            var result = methodsHomework.CombineStrings(firstString, secondString, finalString);
+            var result = homework.CombineStrings(firstString, secondString, finalString);
 
             //assert
             Assert.AreEqual("HelloThereKenobi", result);
@@ -147,7 +147,7 @@ namespace Week7Homework_Methods_Tests
         public void CheckTaxRefundEligibility_ProvidesListOfPersonObjects_AllButOneAreEligible()
         {
             // act
-            methodsHomework.CheckTaxRefundEligibility(people);
+            homework.CheckTaxRefundEligibility(people);
 
             // assert
             Assert.IsTrue(people.Where(x => x.IsEligibleForRefund == true).Count() == 1);
@@ -188,7 +188,7 @@ namespace Week7Homework_Methods_Tests
             decimal income = 100m;
 
             // act
-            var result = methodsHomework.CalculateIncomeTaxes(income, taxesToWithold);
+            var result = homework.CalculateIncomeTaxes(income, taxesToWithold);
 
             // assert
             Assert.AreEqual((decimal)20m, result);
@@ -203,7 +203,7 @@ namespace Week7Homework_Methods_Tests
             decimal income = 100m;
 
             // act
-            var result = methodsHomework.CalculateIncomeTaxes(income, taxesToWithold, addtionalTaxes);
+            var result = homework.CalculateIncomeTaxes(income, taxesToWithold, addtionalTaxes);
 
             // assert
             Assert.AreEqual((decimal)30m, result);

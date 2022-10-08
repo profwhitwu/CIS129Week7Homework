@@ -1,7 +1,7 @@
-﻿public class MethodsHomework
+﻿public class Homework
 {
     // write your methods here
-    
+   
 }
 
 public static class ExtensionMethodsHomework
