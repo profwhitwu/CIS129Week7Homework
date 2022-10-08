@@ -1,11 +1,13 @@
 ﻿public class MethodsHomework
 {
     // write your methods here
+    
 }
 
 public static class ExtensionMethodsHomework
 {
     // write your extention methods here
+
 }
 
 public class Person 

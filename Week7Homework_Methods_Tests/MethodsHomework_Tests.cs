@@ -51,7 +51,7 @@ namespace Week7Homework_Methods_Tests
         public void ConvertToNearestWhole_Gives5And6Tenths_Returns6()
         {
             // arrange
-            decimal number = 5.6;
+            decimal number = 5.6m;
 
             // act
             var result = methodsHomework.ConvertToNearestWhole(number);
@@ -65,7 +65,7 @@ namespace Week7Homework_Methods_Tests
         public void ConvertToNearestWhole_Gives5And4Tenths_Returns6()
         {
             // arrange
-            decimal number = 5.4;
+            decimal number = 5.4m;
 
             // act
             var result = methodsHomework.ConvertToNearestWhole(number);
@@ -79,7 +79,7 @@ namespace Week7Homework_Methods_Tests
         public void ConvertToNearestWhole_Gives5And5Tenths_Returns6()
         {
             // arrange
-            decimal number = 5.5;
+            decimal number = 5.5m;
 
             // act
             var result = methodsHomework.ConvertToNearestWhole(number);
@@ -89,24 +89,39 @@ namespace Week7Homework_Methods_Tests
         }
 
         [TestMethod]
-        public void CombineTwoStrings_ProvidesTwoStrings_ReturnsOneString()
+        public void CombineStrings_ProvidesTwoStrings_ReturnsOneString()
         {
             // arrange
             string firstString = "Hello";
             string lastString = "There";
 
             // act
-            var result = methodsHomework.CombineTwoStrings(firstString, lastString);
+            var result = methodsHomework.CombineStrings(firstString, lastString);
 
             //assert
             Assert.AreEqual("HelloThere", result);
         }
 
         [TestMethod]
+        public void CombineStrings_ProvidesThreeStrings_ReturnsOneString()
+        {
+            // arrange
+            string firstString = "Hello";
+            string secondString = "There";
+            string finalString = "Kenobi";
+
+            // act
+            var result = methodsHomework.CombineStrings(firstString, secondString, finalString);
+
+            //assert
+            Assert.AreEqual("HelloThereKenobi", result);
+        }
+
+        [TestMethod]
         public void VowelCounter_Inserts3Vowels_Returns3()
         {
             // arrange
-            string vowelString = "alceo";
+            string vowelString = "Alceo";
 
             // act
             int vowelCount = vowelString.VowelCounter();
@@ -135,8 +150,8 @@ namespace Week7Homework_Methods_Tests
             methodsHomework.CheckTaxRefundEligibility(people);
 
             // assert
-            Assert.IsTrue(people.Where(x => x.IsEligibleForRefund == true).Count == 1);
-            Assert.IsTrue(people.Where(x => x.IsEligibleForRefund == false).Count == 3);
+            Assert.IsTrue(people.Where(x => x.IsEligibleForRefund == true).Count() == 1);
+            Assert.IsTrue(people.Where(x => x.IsEligibleForRefund == false).Count() == 3);
         }
 
         [TestMethod]
@@ -188,7 +203,7 @@ namespace Week7Homework_Methods_Tests
             decimal income = 100m;
 
             // act
-            var result = methodsHomework.CalculateIncomeTaxes(income, taxesToWithold);
+            var result = methodsHomework.CalculateIncomeTaxes(income, taxesToWithold, addtionalTaxes);
 
             // assert
             Assert.AreEqual((decimal)30m, result);
